@@ -3,26 +3,21 @@ public class HelloWorld {
   // of accounts to read "Hello World".
 
 public static void addHelloWorld(Account[] accs){
+	//Requirement : When the object Account having description is different then inject Hello World
   for (Account a:accs){
       if (a.Description != 'Hello World')
             a.Description = 'Hello World';
-       }
-    }
-    
-   //static Integer count=0;
-   
- //  public static void addUser(User[] a){
-   //	for(User user: a){
-   		//user.EmployeeNumber= "TR"+count++;
-   		//user.ForecastEnabled=true;
-   	//}
-  // }	
-    
-    public static void addPhone(User[] p){
-    for (User pho : p){
-    	if(pho.phone == null)
-    	pho.phone='0000000000'; 
-    }
-    }
-    
-}
+            
+        System.debug(a.Curent_DateTime__c);    
+       if(a.Curent_DateTime__c == null)
+           a.Curent_DateTime__c = Date.today();   
+            
+		}
+		
+}		
+
+
+
+	
+	
+ }
